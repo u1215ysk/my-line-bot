@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 # あなたの「チャネルアクセストークン」と「チャネルシークレット」をここに設定
 # ※実際には直接書き込まず、後述するサーバーの環境変数に設定します
-channel_access_token = os.environ.get('q67XnMMYVvC/TEuhJwomfmxWiXnn0zlK1Uat+VT1N5kBKHpFBcZLI0FzXrw4BfzHUSlN5jDS7Ox4z01yv78jv9lLIBEtpDfHVFSLqR2f1rZ53vwh5qwS0QPXKvpF9yLTedi5oGCGOQ/XqAc+VaAhlAdB04t89/1O/w1cDnyilFU=', None)
-channel_secret = os.environ.get('454eeb38d6734426d8a58acb84c0597d', None)
+channel_access_token = os.environ.get('LINE_CHANNEL_ACCESS_TOKEN', None)
+channel_secret = os.environ.get('LINE_CHANNEL_SECRET', None)
 
 line_bot_api = LineBotApi(channel_access_token)
 handler = WebhookHandler(channel_secret)
